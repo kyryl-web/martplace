@@ -404,9 +404,11 @@
 .resume-wrapper {}
 
 .products__resume {
-    display: flex;
-    justify-content: space-between;
     background-color: #fff;
+}
+.resume__item-slide{
+    display: flex !important;
+    justify-content: space-between;
 }
 
 .resume__item-2 {
@@ -1188,9 +1190,10 @@
 //start footer
 
 .footer {
-    background-color: rgb(13, 15, 19);  
+    background-color: rgb(13, 15, 19);
 }
-.footer__inner{
+
+.footer__inner {
     padding: 114px 0;
 }
 
@@ -1340,19 +1343,22 @@
             right: 0;
         }
     }
-    .footer__item-title{
+
+    .footer__item-title {
         margin-bottom: 41px;
     }
 }
 
 .footer__social-link {
-    li{
+    li {
         display: inline-block;
-        &+li{
+
+        &+li {
             margin-left: 9px;
         }
     }
-    a{
+
+    a {
         background-image: url(../images/icons/css_sprites.png);
         width: 42px;
         height: 42px;
@@ -1383,46 +1389,53 @@
 .link-pink {
     background-position: -84px -42px;
 }
-.footer__copy{
+
+.footer__copy {
     text-align: center;
     padding: 38px 0;
     background-color: rgb(25, 32, 39);
     color: #ababab;
-    span{
+
+    span {
         color: #fff;
     }
 }
 
-  
+
 
 //end footer
 
 //start wordpress
 
-.wordpress{
+.wordpress {
     padding: 87px 0 30px 0;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
 }
-.wordpress__inner{
+
+.wordpress__inner {
     text-align: center;
 }
-.wordpress__title{
+
+.wordpress__title {
     color: #fff;
     font-size: 26px;
     margin-bottom: 33px;
-    span{
+
+    span {
         font-weight: 500;
     }
 }
-.wordpress__inner{
-    form{
+
+.wordpress__inner {
+    form {
         position: relative;
         max-width: 554px;
         margin: 0 auto;
         margin-bottom: 37px;
-        input{
+
+        input {
             max-width: 554px;
             width: 100%;
             height: 54px;
@@ -1431,12 +1444,14 @@
             border-radius: 30px;
             font-size: 15px;
             color: #747b86;
-            &::placeholder{
+
+            &::placeholder {
                 color: #747b86;
                 font-size: 15px;
             }
         }
-        button{
+
+        button {
             background-color: $blue;
             color: #fff;
             border: none;
@@ -1448,21 +1463,26 @@
         }
     }
 }
-.breadcrumbs__list{
-    li{
-        a{
+
+.breadcrumbs__list {
+    li {
+        a {
             color: #fff;
         }
-        span{
+
+        span {
             color: #fff;
         }
+
         display: inline-block;
-        &+li{
+
+        &+li {
             padding-left: 18px;
             position: relative;
             margin-left: 8px;
             opacity: 0.7;
-            &::before{
+
+            &::before {
                 content: "/";
                 position: absolute;
                 left: 0;
@@ -1472,5 +1492,5 @@
     }
 }
 
-  
+
 //end wordpress
