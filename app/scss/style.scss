@@ -1494,3 +1494,91 @@
 
 
 //end wordpress
+// start navigation
+// end navigation
+
+.navigation{
+    box-shadow: 0px 2px 4px 0px rgba(108, 111, 115, 0.1);
+}
+.navigation__inner{
+    display: flex;
+    justify-content: space-between;
+    height: 100px;
+    align-items: center;
+}
+.navigation__btn{
+    button{
+        border: none;
+        background-color: #fff;
+        cursor: pointer;
+        color: $black;
+        font-size: 16px;
+        outline: none;
+        &.active{
+            color: $blue;
+        }
+    }
+}
+.navigation__btn-color{
+    &.active{
+        color: $blue;
+    }
+}
+.navigation__filters{
+    max-width: 600px;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    select{
+        height: 43px;
+        color: #747b86;
+        outline: none;
+        appearance: none;
+        background-image: url(../images/select-arrow.png);
+        background-repeat: no-repeat;
+        background-position: 188px;
+        border: 1px solid rgb(236, 239, 242);
+        border-radius: 3px;
+    }
+    form{
+        position: relative;
+        max-width: 220px;
+        width: 100%;
+        margin-right: 32px;
+        span{
+            position: absolute;
+            left: 24px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: $black;
+        }
+        .select__price{
+            padding-left: 62px;
+            max-width: 220px;
+            width: 100%;
+        }
+    }
+}
+.select__price-num{
+    margin-right: 32px;
+    max-width: 220px;
+    width: 100%;
+    padding-left: 17px;
+}
+.navigation__filters-icon{
+    display: flex;
+    align-items: center;
+    padding: 11px 20px;
+    border: 1px solid rgb(236, 239, 242);
+    border-radius: 3px;
+}
+.navigation__icon{
+    &+&{
+        margin-left: 15px;
+    }
+    &.active{
+        color: $blue;
+    }
+}
+
+  
