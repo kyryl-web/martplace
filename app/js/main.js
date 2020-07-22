@@ -80,6 +80,13 @@ $(function(){
  
       });
 
+      $('.header__btn-menu').on('click', function(){
+        $('.header__items').toggleClass('active')
+      });
+
+      $('.header__bot-btn').on('click', function(){
+        $('.header__menu .menu-list').slideToggle()
+      });
       
       if ($('.release__inner').length) {
         var mixer = mixitup('.release__inner');
