@@ -2878,6 +2878,24 @@ div.arrow-right {
 }
 
 // end register
+// start login
+
+.register__links{
+    display: flex;
+    justify-content: space-between;
+}
+.create{
+    font-size: 16px;
+    color: #898f96;
+    padding-bottom: 62px;
+    a{
+        color: $blue;
+        font-weight: 500;
+    }
+}
+
+
+// end login
 
 
 
