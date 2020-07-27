@@ -4124,6 +4124,12 @@ div.arrow-right {
         &:nth-child(2){
             background-color:rgb(115, 71, 193);
             margin-bottom: 0;
+            position: relative;
+            padding-left: 23px;
+            &::before{
+                position: absolute;
+                left: 95px;
+            }
         }
     }
 }
@@ -4294,10 +4300,12 @@ div.arrow-right {
     .release__item{
         flex-basis: calc(33.3333% - 28px);
         margin-left: 28px;
-        border-radius: 4px;
-        .release__item-image{
-            border-radius: 4px 4px 0 0;
-        }
+    }
+}
+.release__item{
+    border-radius: 4px;
+    .release__item-image{
+        border-radius: 4px 4px 0 0;
     }
 }
 
