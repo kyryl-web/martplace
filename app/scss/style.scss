@@ -676,6 +676,7 @@
         overflow: auto;
         padding: 22px 20px;
         border-top: 1px solid $blue;
+        z-index: 6;
     }
 
 }
@@ -898,7 +899,8 @@
 //start search
 
 .products__search {
-    width: 1140px;
+    max-width: 1110px;
+    width: 100%;
     min-height: 135px;
     display: flex;
     justify-content: space-between;
@@ -988,7 +990,8 @@
 .products__search::before {
     content: "";
     max-width: 1111px;
-    width: 100%;
+    // width: 100%;
+    width: calc(100% - 30px);
     height: 26px;
     border-radius: 6px;
     background-color: #fff;
@@ -996,22 +999,19 @@
     position: absolute;
     transform: translateY(-50%);
     top: 0;
-    right: 15px;
     left: 15px;
 }
 
 .products__search::after {
     content: "";
     height: 54px;
-    max-width: 1081px;
-    width: 100%;
+    width: calc(100% - 60px);
     background-color: #fff;
     opacity: 0.502;
     position: absolute;
     top: 0;
     transform: translateY(-50%);
     border-radius: 6px;
-    right: 30px;
     left: 30px;
 }
 
@@ -1413,8 +1413,13 @@
 
 .release__inner {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     flex-wrap: wrap;
+    margin-left: -30px;
+    .release__item{
+        flex-basis: calc(33.3333% - 30px);
+        margin-left: 30px;
+    }
 }
 
 .release__all-btn {
@@ -1574,13 +1579,17 @@
 
 .advantages__inner {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
+    margin-left: -30px;
     flex-wrap: wrap;
     counter-reset: numer;
 }
+.advantages__inner-item{
+    flex-basis: calc(33.3333% - 30px);
+    margin-left: 30px;
+}
 
 .advantages__item {
-
     &-image {
         font-size: 60px;
         color: $blue;
@@ -1631,7 +1640,7 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    padding: 100px 0 76px;
+    padding: 100px 10px 76px;
     text-align: center;
 
     &-image {
@@ -1749,6 +1758,7 @@
 .news__inner {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .new__item {
@@ -1882,7 +1892,7 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    padding: 112px 0 103px;
+    padding: 112px 10px 103px;
     text-align: center;
 
     &__title {
@@ -2228,7 +2238,7 @@
 .navigation__inner {
     display: flex;
     justify-content: space-between;
-    height: 100px;
+    min-height: 100px;
     align-items: center;
 }
 
@@ -2942,7 +2952,12 @@ div.arrow-right {
             font-weight: 500;
             color: #000;
         }
-
+        .remember{
+            display: inline-block;
+            margin-left: 10px;
+            font-size: 16px;
+            color: #555555;
+        }
         input {
             margin-bottom: 30px;
             width: 100%;
@@ -2967,11 +2982,14 @@ div.arrow-right {
             padding: 18px 28px;
             width: 190px;
             margin-bottom: 40px;
+            display: block;
+            margin-top: 27px;
         }
     }
 }
 
 .register__link {
+    padding-right: 15px;
     font-size: 16px;
     color: #898f96;
     padding-bottom: 62px;
@@ -3194,7 +3212,7 @@ div.arrow-right {
         border-radius: 4px;
         display: inline-block;
         width: 100%;
-        padding: 18px 54px;
+        padding: 18px 0px;
         background-color: #ff6a6c;
         font-size: 18px;
         font-weight: 500;
@@ -3482,6 +3500,9 @@ div.arrow-right {
 // end how
 // start favorites
 
+.favorites{
+    background-color: $grey;
+}
 .favorites__found {
     font-size: 24px;
     max-width: 300px;
@@ -3502,10 +3523,6 @@ div.arrow-right {
     height: 100px;
     display: flex;
     align-items: center;
-    top: 50%;
-    transform: translateY(-50%);
-    z-index: -1;
-
     &::after {
         content: "\f107";
         color: #555;
@@ -3694,7 +3711,8 @@ div.arrow-right {
 
 .blog__aside-item {
     background-color: #fff;
-    width: 360px;
+    max-width: 360px;
+    width: 100%;
     padding-bottom: 40px;
     margin-bottom: 30px;
     box-shadow: 0px 2px 4px 0px rgba(108, 111, 115, 0.1);
@@ -4029,7 +4047,7 @@ div.arrow-right {
     }
 }
 .product__tab-image{
-    min-height: 1000px;
+    height: 1000px;
     width: 100%;
 }
 .product__aside{

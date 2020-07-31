@@ -26,14 +26,32 @@ $(function(){
       slidesToShow: 3,
       slidesToScroll: 1,
       prevArrow: '<button class="slick-arrow arrow-prev"><img src="images/arrow-prev.png" alt=""></button>',
-      nextArrow: '<button class="slick-arrow arrow-next"><img src="images/arrow-next.png" alt=""></button>'
+      nextArrow: '<button class="slick-arrow arrow-next"><img src="images/arrow-next.png" alt=""></button>',
+      responsive: [
+        {
+          breakpoint: 1150,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 1,
+            infinite: true,
+          }
+        },
+        {
+          breakpoint: 800,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            infinite: true,
+          }
+        },
+      ]
     });
 
       $('.products__resume').slick({
         slidesToShow: 1,
         slidesToScroll: 1,
         prevArrow: '<button class="slick-arrow arrow-prev"><img src="images/arrow-prev.png" alt=""></button>',
-        nextArrow: '<button class="slick-arrow arrow-next"><img src="images/arrow-next.png" alt=""></button>'
+        nextArrow: '<button class="slick-arrow arrow-next"><img src="images/arrow-next.png" alt=""></button>',
       });
 
       $('.navigation__btn-color').on('click', function(){
@@ -121,6 +139,11 @@ $(function(){
         $(this).addAttr(checked)
       });
         
+      $('.login-radio').on('click', function(){
+        $('.login-radio').toggleClass('focused');
+        $(this).toggleAttr(checked)
+
+      });
       
       
       if ($('.release__inner').length) {
